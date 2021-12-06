@@ -1,0 +1,11 @@
+/lambda/
+/scripts
+/config
+.history
+public
+dist
+.umi
+mock
+/tests
+/src\.umi
+/src\services

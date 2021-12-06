@@ -1,0 +1,195 @@
+@import '~antd/es/style/themes/default.less';
+@import './style/lib';
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family: PingFangSC, PingFangSC-Regular, '微软雅黑';
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-pro-sider.ant-layout-sider.ant-pro-sider-fixed {
+  left: unset;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// Compatible with IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
+
+.ant-card-body{
+  padding:0 !important;
+}
+.ant-pro-menu-item {
+  .anticon,
+  .ant-pro-menu-item-title {
+    vertical-align: middle;
+  }
+}
+
+.ant-layout-content .ant-page-tabs {
+  margin-top: 0;
+
+  .ant-page-tab-list {
+    overflow: visible;
+
+    & > .ant-tabs-nav {
+      margin-bottom: 0;
+
+      & > .ant-tabs-nav-wrap {
+        margin-right: 0;
+        margin-left: 0;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+//左侧菜单样式更改
+.ant-pro-sider {
+  background-color: #414954 !important;
+}
+
+.ant-menu-dark .ant-menu-inline.ant-menu-sub {
+  background-color: #272d36 !important;
+}
+
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: #42756a;
+}
+
+//上方导航样式修改
+.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab {
+  border-bottom: 2px transparent solid;
+  border-radius: 0 !important;
+}
+
+.ant-tabs-nav {
+  border-bottom: 1px solid @border-color-base;
+}
+
+.ant-tabs-tab-active {
+  border-bottom: 2px @nav_color solid !important;
+
+  span {
+    color: @nav_color !important;
+  }
+}
+
+.ant-menu-item-only-child {
+  margin: 0 !important;
+}
+
+.ant-pro-sider-logo {
+  h1 {
+    font-size: 16px!important;
+    color: #d3d6d9;
+  }
+}
+
+// .ant-pro-basicLayout-content-disable-margin .ant-page-tabs {
+//   margin-top: 0;
+//   .ant-page-tab-list > .ant-tabs-nav {
+//     margin-bottom: unset;
+//     & > .ant-tabs-nav-wrap {
+//       margin-right: 0;
+//       margin-left: 0;
+//     }
+//   }
+// }
+::-webkit-scrollbar {
+  width: 6px !important;
+  height:12px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c3c3c3;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #efefef;
+  border-radius: 10px;
+}
+
+.csc-warpper {
+  padding: @margin;
+}
+
+.ant-table-thead>tr>th{
+  font-weight: bold!important;
+}
+.ant-form-item-label {
+  font-family: PingFangSC,PingFangSC-Medium, '微软雅黑';
+  display: flex;
+  justify-content: flex-end;
+  line-height: 16px;  //这个数值视具体情况而定
+  label {            //这是关键
+    white-space: normal;
+    text-align: right;
+    padding-right: 12px;
+    font-size: @font-size-base;
+    &:after {
+      content: none !important;      //解决上面的样式label后面会有空格
+    }
+  }
+}
+.ant-affix{
+  z-index: 1080;
+}
+
+//修改筛选表单的左侧label宽度
+.ant-form-horizontal .ant-form-item-label{
+  width: 100px;
+}
+.csc_bi_form_fixed_filter .ant-form-item{
+  margin: 0 0 15px;
+}
+.ant-tabs-card>.ant-tabs-nav .ant-tabs-tab, .ant-tabs-card>div>.ant-tabs-nav .ant-tabs-tab{
+  background: #fff!important;
+}

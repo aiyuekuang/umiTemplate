@@ -1,0 +1,128 @@
+@import '../../style/lib';
+@pro-header-hover-bg: rgba(0, 0, 0, 0.025);
+
+.menu {
+  :global(.anticon) {
+    margin-right: 8px;
+  }
+  :global(.ant-dropdown-menu-item) {
+    min-width: 160px;
+  }
+}
+
+header {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.right {
+  display: flex;
+  float: right;
+  height: 48px;
+  margin-left: auto;
+  overflow: hidden;
+  .action {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    > span {
+      vertical-align: middle;
+    }
+    &:hover {
+      background: @pro-header-hover-bg;
+    }
+    &:global(.opened) {
+      background: @pro-header-hover-bg;
+    }
+  }
+  .search {
+    padding: 0 12px;
+    &:hover {
+      background: transparent;
+    }
+  }
+  .account {
+    .avatar {
+      margin-right: 8px;
+      color: @primary-color;
+      vertical-align: top;
+      background: rgba(255, 255, 255, 0.85);
+    }
+  }
+}
+
+.dark {
+  .action {
+    &:hover {
+      background: #252a3d;
+    }
+    &:global(.opened) {
+      background: #252a3d;
+    }
+  }
+}
+
+@media only screen and (max-width: @screen-md) {
+  :global(.ant-divider-vertical) {
+    vertical-align: unset;
+  }
+  .name {
+    display: none;
+  }
+  .right {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    .account {
+      .avatar {
+        margin-right: 0;
+      }
+    }
+    .search {
+      display: none;
+    }
+  }
+}
+.rightComponentLi{
+  cursor: pointer;
+}
+.dropModal{
+  padding-bottom: 16px;
+}
+.dropModalTitle{
+  font-size: 16px;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 550;
+  line-height: 57px;
+  padding: 0 24px;
+
+}
+.dropModalListLiDate{
+  padding: 16px 0;
+  color: rgba(0,0,0,0.65);
+}
+.dropModalListLi{
+  padding: 0 24px;
+}
+.dropModalListLiList{
+  padding: 8px 0;
+  >div{
+    margin: 4px auto;
+  }
+}
+.dropModalListLiListLi{
+  background: #fafafa;
+  border-radius:@base_radius;
+  padding:16px ;
+  .hp();
+}
+.dropModalListLiListLiLeft{
+  img,span{
+    vertical-align: middle;
+  }
+}
+.processing{
+  color: @disabled-color;
+}
